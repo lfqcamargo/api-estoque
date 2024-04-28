@@ -1,0 +1,5 @@
+INSERT INTO sles (sles_id, sles_dsc, sles_dat_cria, user_id, sles_dat_atua, sles_obs) VALUES
+(1, 'Armazém 1', '2024-04-07 14:32:49', 3, '2024-04-07 14:32:49', NULL),
+(2, 'Armazém 2', '2024-04-07 14:32:49', 3, '2024-04-07 14:32:49', NULL),
+(3, 'Armazém 3', '2024-04-07 14:32:49', 3, '2024-04-07 14:32:49', NULL),
+(4, 'Armazém 4', '2024-04-07 14:32:49', 3, '2024-04-07 14:32:49', NULL);

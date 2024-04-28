@@ -1,0 +1,11 @@
+INSERT INTO user (user_id, user_nom, user_cpf, user_dsc_email, user_has_senha, user_dat_cria, user_dat_atua, user_ind_ativo, user_dat_login) VALUES
+(1, "Ana Beatriz Souza", 12345678901, "ana.beatriz@example.com", "senhaSegura123", "2024-03-31 14:20:00", "2024-03-31 14:20:00", 1, NULL),
+(2, "Roberto Silva", 23456789012, "roberto.silva@example.com", "senhaSegura123", "2024-04-01 11:15:00", "2024-04-01 11:15:00", 1, NULL),
+(3, "Mariana Costa", 34567890123, "mariana.costa@example.com", "senhaSegura123", "2024-04-02 09:00:00", "2024-04-02 09:00:00", 1, NULL),
+(4, "Carlos Eduardo Pereira", 45678901234, "carlos.eduardo@example.com", "senhaSegura123", "2024-04-03 08:30:00", "2024-04-03 08:30:00", 1, NULL),
+(5, "Juliana Martins", 56789012345, "juliana.martins@example.com", "senhaSegura123", "2024-04-04 10:15:00", "2024-04-04 10:15:00", 1, NULL),
+(6, "Fernando Gomes", 67890123456, "fernando.gomes@example.com", "senhaSegura123", "2024-04-05 11:20:00", "2024-04-05 11:20:00", 1, NULL),
+(7, "Lívia Ribeiro", 78901234567, "livia.ribeiro@example.com", "senhaSegura123", "2024-04-06 12:25:00", "2024-04-06 12:25:00", 1, NULL),
+(8, "Pedro Alcântara", 89012345678, "pedro.alcantara@example.com", "senhaSegura123", "2024-04-07 13:30:00", "2024-04-07 13:30:00", 1, NULL),
+(9, "Camila Porto", 90123456789, "camila.porto@example.com", "senhaSegura123", "2024-04-08 14:35:00", "2024-04-08 14:35:00", 1, NULL),
+(10, "Gabriel Teixeira", 01234567890, "gabriel.teixeira@example.com", "senhaSegura123", "2024-04-09 15:40:00", "2024-04-09 15:40:00", 1, NULL);
