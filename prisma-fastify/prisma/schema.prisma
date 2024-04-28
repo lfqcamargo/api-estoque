@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id          String   @id @default(uuid()) @map("COMP_ID")
+  cnpj        String   @unique @map("COMP_COD_CNPJ")
+  email       String   @unique @map("COMP_EMAIL")
+  name        String   @map("COMP_NAM")
+  nameFantasy String?  @map("COMP_NAM_FANT")
+  createdAt   DateTime @default(now()) @map("COMP_DAT_CREA")
+  observation String?  @map("COMP_OBS")
+
+  users User[]
+
+  @@map("COMP")
+}
+
+model User {
+  companyId     String    @map("COMP_ID")
+  id            String    @default(uuid()) @map("USER_ID")
+  email         String    @unique @map("USER_EMAIL")
+  name          String    @map("USER_NAM")
+  cpf           String    @map("USER_COD_CPF")
+  cellphone     Int       @map("USER_NUM_CEL")
+  password_hash String    @map("USER_HAS_PASSWORD")
+  active        Boolean   @default(true) @map("USER_IND_ACTIVE")
+  createdAt     DateTime  @default(now()) @map("USER_DAT_CREA")
+  lasteLogin    DateTime? @map("USER_DAT_LOGIN")
+
+  permissions PermissionsUser[]
+
+  company Company @relation(fields: [companyId], references: [id])
+
+  @@id([id, companyId])
+  @@map("USER")
+}
+
+model PermissionsUser {
+  userCompanyId String   @map("COMP_ID")
+  userId        String   @map("USER_ID")
+  administrator Boolean? @map("PUSR_IND_ADM")
+  inclusion     Boolean? @map("PUSR_IND_INCL")
+  exclusion     Boolean? @map("PUSR_IND_EXCL")
+  update        Boolean? @map("PUSR_IND_UPDA")
+
+  user User @relation(fields: [userId, userCompanyId], references: [id, companyId])
+
+  @@id([userCompanyId, userId])
+  @@map("PUSR")
+}

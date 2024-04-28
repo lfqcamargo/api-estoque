@@ -1,0 +1,20 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2],               // Indenta com 2 espaços
+    "semi": ["error", "always"],          // Exige ponto e vírgula no final das instruções
+    "eol-last": ["error", "always"],      // Exige uma quebra de linha no final dos arquivos
+    "quotes": ["error", "single"]         // Exige uso de aspas simples
+  }
+}
